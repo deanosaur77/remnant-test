@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "currencyPair": { "type": "string" },
+    "askPrice": { "type": "string", "format": "color" },
+    "bidPrice": { "type": "string", "format": "color" },
+    "lastTradedPrice": { "type": "string", "format": "color" },
+    "previousClosePrice": { "type": "string", "format": "color" },
+    "baseVolume": { "type": "string" },
+    "quoteVolume": { "type": "string" },
+    "highPrice": { "type": "string", "format": "color" },
+    "lowPrice": { "type": "string", "format": "color" },
+    "created": { "type": "string", "format": "date-time" },
+    "changeFromPrevious": { "type": "string" },
+    "markPrice": { "type": "string", "format": "color" }
+  }
+}

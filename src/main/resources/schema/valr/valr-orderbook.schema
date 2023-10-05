@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "Asks": { "type": "array", "items": { "type": "object" } },
+    "Bids": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "side": { "type": "string" },
+          "quantity": { "type": "string" },
+          "price": { "type": "string", "format": "color" },
+          "currencyPair": { "type": "string" },
+          "orderCount": { "type": "integer" }
+        }
+      }
+    },
+    "LastChange": { "type": "string", "format": "date-time" },
+    "SequenceNumber": { "type": "integer" }
+  }
+}

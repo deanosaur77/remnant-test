@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "transactionType": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": ["type", "description"]
+      },
+      "creditCurrency": {
+        "type": "string"
+      },
+      "creditValue": {
+        "type": "string"
+      },
+      "eventAt": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "additionalInfo": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "transactionHash": {
+            "type": "string"
+          }
+        },
+        "required": ["address", "transactionHash"]
+      },
+      "id": {
+        "type": "string"
+      }
+    },
+    "required": ["transactionType", "creditCurrency", "creditValue", "eventAt", "additionalInfo", "id"]
+  }
+}

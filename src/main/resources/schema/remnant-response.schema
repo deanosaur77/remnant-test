@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+      "message": { "type": "string"},
+      "error": { "type": "string" },
+      "btcAddress": { "type": "string" },
+      "subAccountId": { "type": "string" }    
+    }
+}
