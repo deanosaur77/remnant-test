@@ -113,9 +113,9 @@ public class ValrBalance {
     @Override
     public int hashCode() {
         int result = 1;
+        result = ((result* 31)+((this.account == null)? 0 :this.account.hashCode()));
         result = ((result* 31)+((this.balances == null)? 0 :this.balances.hashCode()));
         result = ((result* 31)+((this.additionalProperties == null)? 0 :this.additionalProperties.hashCode()));
-        result = ((result* 31)+((this.account == null)? 0 :this.account.hashCode()));
         return result;
     }
 
@@ -128,7 +128,7 @@ public class ValrBalance {
             return false;
         }
         ValrBalance rhs = ((ValrBalance) other);
-        return ((((this.balances == rhs.balances)||((this.balances!= null)&&this.balances.equals(rhs.balances)))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.account == rhs.account)||((this.account!= null)&&this.account.equals(rhs.account))));
+        return ((((this.account == rhs.account)||((this.account!= null)&&this.account.equals(rhs.account)))&&((this.balances == rhs.balances)||((this.balances!= null)&&this.balances.equals(rhs.balances))))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))));
     }
 
 }

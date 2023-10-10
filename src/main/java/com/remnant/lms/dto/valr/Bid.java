@@ -132,12 +132,12 @@ public class Bid {
     @Override
     public int hashCode() {
         int result = 1;
+        result = ((result* 31)+((this.orderCount == null)? 0 :this.orderCount.hashCode()));
         result = ((result* 31)+((this.side == null)? 0 :this.side.hashCode()));
         result = ((result* 31)+((this.currencyPair == null)? 0 :this.currencyPair.hashCode()));
         result = ((result* 31)+((this.quantity == null)? 0 :this.quantity.hashCode()));
-        result = ((result* 31)+((this.price == null)? 0 :this.price.hashCode()));
-        result = ((result* 31)+((this.orderCount == null)? 0 :this.orderCount.hashCode()));
         result = ((result* 31)+((this.additionalProperties == null)? 0 :this.additionalProperties.hashCode()));
+        result = ((result* 31)+((this.price == null)? 0 :this.price.hashCode()));
         return result;
     }
 
@@ -150,7 +150,7 @@ public class Bid {
             return false;
         }
         Bid rhs = ((Bid) other);
-        return (((((((this.side == rhs.side)||((this.side!= null)&&this.side.equals(rhs.side)))&&((this.currencyPair == rhs.currencyPair)||((this.currencyPair!= null)&&this.currencyPair.equals(rhs.currencyPair))))&&((this.quantity == rhs.quantity)||((this.quantity!= null)&&this.quantity.equals(rhs.quantity))))&&((this.price == rhs.price)||((this.price!= null)&&this.price.equals(rhs.price))))&&((this.orderCount == rhs.orderCount)||((this.orderCount!= null)&&this.orderCount.equals(rhs.orderCount))))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))));
+        return (((((((this.orderCount == rhs.orderCount)||((this.orderCount!= null)&&this.orderCount.equals(rhs.orderCount)))&&((this.side == rhs.side)||((this.side!= null)&&this.side.equals(rhs.side))))&&((this.currencyPair == rhs.currencyPair)||((this.currencyPair!= null)&&this.currencyPair.equals(rhs.currencyPair))))&&((this.quantity == rhs.quantity)||((this.quantity!= null)&&this.quantity.equals(rhs.quantity))))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.price == rhs.price)||((this.price!= null)&&this.price.equals(rhs.price))));
     }
 
 }

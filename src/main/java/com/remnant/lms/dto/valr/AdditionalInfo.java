@@ -111,9 +111,9 @@ public class AdditionalInfo {
     @Override
     public int hashCode() {
         int result = 1;
+        result = ((result* 31)+((this.transactionHash == null)? 0 :this.transactionHash.hashCode()));
         result = ((result* 31)+((this.address == null)? 0 :this.address.hashCode()));
         result = ((result* 31)+((this.additionalProperties == null)? 0 :this.additionalProperties.hashCode()));
-        result = ((result* 31)+((this.transactionHash == null)? 0 :this.transactionHash.hashCode()));
         return result;
     }
 
@@ -126,7 +126,7 @@ public class AdditionalInfo {
             return false;
         }
         AdditionalInfo rhs = ((AdditionalInfo) other);
-        return ((((this.address == rhs.address)||((this.address!= null)&&this.address.equals(rhs.address)))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.transactionHash == rhs.transactionHash)||((this.transactionHash!= null)&&this.transactionHash.equals(rhs.transactionHash))));
+        return ((((this.transactionHash == rhs.transactionHash)||((this.transactionHash!= null)&&this.transactionHash.equals(rhs.transactionHash)))&&((this.address == rhs.address)||((this.address!= null)&&this.address.equals(rhs.address))))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))));
     }
 
 }

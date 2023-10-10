@@ -23,5 +23,5 @@ artifacts:
     - appspec.yml
     - template.yml
     - scripts/*
-    - target/ROOT.war
+    - target/lms-0.0.1-SNAPSHOT.jar
     - template-configuration.json

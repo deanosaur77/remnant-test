@@ -81,9 +81,9 @@ public class ScheduleDetail {
     @Override
     public int hashCode() {
         int result = 1;
+        result = ((result* 31)+((this.month == null)? 0 :this.month.hashCode()));
         result = ((result* 31)+((this.repaymentAmount == null)? 0 :this.repaymentAmount.hashCode()));
         result = ((result* 31)+((this.additionalProperties == null)? 0 :this.additionalProperties.hashCode()));
-        result = ((result* 31)+((this.month == null)? 0 :this.month.hashCode()));
         return result;
     }
 
@@ -96,7 +96,7 @@ public class ScheduleDetail {
             return false;
         }
         ScheduleDetail rhs = ((ScheduleDetail) other);
-        return ((((this.repaymentAmount == rhs.repaymentAmount)||((this.repaymentAmount!= null)&&this.repaymentAmount.equals(rhs.repaymentAmount)))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.month == rhs.month)||((this.month!= null)&&this.month.equals(rhs.month))));
+        return ((((this.month == rhs.month)||((this.month!= null)&&this.month.equals(rhs.month)))&&((this.repaymentAmount == rhs.repaymentAmount)||((this.repaymentAmount!= null)&&this.repaymentAmount.equals(rhs.repaymentAmount))))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))));
     }
 
 }
